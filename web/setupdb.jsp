@@ -15,12 +15,9 @@
                     "fname, " +
                     "lname);");
 
-        /*stat.executeUpdate("insert into users " +
-                           "(username, password) values " +
-                           "('dsmith', 'password');");
-        stat.executeUpdate("insert into users " +
-                           "(username, password) values " +
-                           "('jarnold', 'password');");*/
+        stat.executeUpdate("insert into artists " +
+                           "(id, fname, lname) values " +
+                           "(1, 'Michael', 'Jackson');");
 
         stat.executeUpdate("drop table if exists albums;");
         stat.executeUpdate(
@@ -32,6 +29,11 @@
                     "year, " +
                     "price, " +
                     "isavailable);");
+
+        stat.executeUpdate(
+                "insert into albums " +
+                "(id, artistid, name, genre, year, price, isavailable) values " +
+                "(1, 1, 'Bad', 'Pop', 1987, 7.97, 1);");
 
         /*stat.executeUpdate("insert into posts " +
                            "(userId, message) values " +
@@ -50,8 +52,42 @@
                     "albumid, " +
                     "name);");
 
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Bad');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Way You Make Me Feel');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Speed Demon');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Liberian Girl');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Just Good Friends');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Another Part of Me');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Man in the Mirror');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'I Just Cant Stop Loving You');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Dirty Diana');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Smooth Criminal');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(1, 'Leave Me Alone');");
+
         out.println("Database set up successfully.");
-        
+
         conn.close();
     } catch (Exception ex) {
         out.println("Error: " + ex.getMessage());
