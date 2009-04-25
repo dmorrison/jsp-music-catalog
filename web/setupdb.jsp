@@ -18,6 +18,15 @@
         stat.executeUpdate("insert into artists " +
                            "(id, fname, lname) values " +
                            "(1, 'Michael', 'Jackson');");
+        stat.executeUpdate("insert into artists " +
+                           "(id, fname, lname) values " +
+                           "(2, 'Diana', 'Krall');");
+        stat.executeUpdate("insert into artists " +
+                           "(id, fname, lname) values " +
+                           "(3, 'Grandmaster', 'Flash');");
+        stat.executeUpdate("insert into artists " +
+                           "(id, fname, lname) values " +
+                           "(4, 'Donna', 'Summer');");
 
         stat.executeUpdate("drop table if exists albums;");
         stat.executeUpdate(
@@ -34,16 +43,22 @@
                 "insert into albums " +
                 "(id, artistid, name, genre, year, price, isavailable) values " +
                 "(1, 1, 'Bad', 'Pop', 1987, 7.97, 1);");
-
-        /*stat.executeUpdate("insert into posts " +
-                           "(userId, message) values " +
-                           "(1, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eu elit imperdiet neque porttitor volutpat. Etiam nec metus. Curabitur ac urna. Duis feugiat, lectus quis iaculis tempor, est nulla rhoncus tortor, sed venenatis nisl orci eu eros. Aliquam commodo. Sed ac tortor vel nunc hendrerit venenatis. Nunc nec augue. Fusce dui velit, porttitor et, congue quis, commodo ac, mauris. Integer ante. Sed viverra tristique elit. Sed suscipit. Donec nisi arcu, ornare in, rhoncus nec, convallis et, ipsum. Proin nec sem in ligula vulputate volutpat. In sodales tellus non justo. Maecenas vel arcu. Vivamus viverra.');");
-        stat.executeUpdate("insert into posts " +
-                           "(userId, timestamp, message) values " +
-                           "(2, '2009-02-19 17:27:45', 'Morbi metus purus, rhoncus nec, mollis nec, porttitor at, elit. Donec bibendum, ligula non auctor cursus, risus metus sodales lorem, quis hendrerit justo magna tristique felis. Curabitur eget metus. Sed placerat. In dolor lorem, sodales ac, lobortis eu, semper quis, leo. Donec sollicitudin nibh. Vivamus sed augue et sem vestibulum ultricies. Mauris commodo semper tellus. Nulla eros massa, auctor et, suscipit id, hendrerit non, dui. Maecenas mi nunc, ultricies vitae, bibendum non, pulvinar id, elit. Cras tristique, nibh vitae elementum vestibulum, ipsum erat tristique massa, id pretium tortor eros vitae purus. In hac habitasse platea dictumst. Quisque sodales nunc. Pellentesque metus sapien, scelerisque vitae, imperdiet vitae, mattis tincidunt, dui.');");
-        stat.executeUpdate("insert into posts " +
-                           "(userId, timestamp, message) values " +
-                           "(2, '2009-03-01 16:55:25', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed turpis. Maecenas a ligula. Vestibulum magna. Aliquam erat volutpat. In ligula. Morbi varius egestas nunc. Sed semper metus vitae purus. Suspendisse tincidunt justo eget sem. Nulla leo magna, scelerisque nec, tristique vel, malesuada a, felis. Aenean interdum tortor et sem. ');");*/
+        stat.executeUpdate(
+                "insert into albums " +
+                "(id, artistid, name, genre, year, price, isavailable) values " +
+                "(2, 2, 'Quiet Nights', 'Jazz', 2009, 8.99, 0);");
+        stat.executeUpdate(
+                "insert into albums " +
+                "(id, artistid, name, genre, year, price, isavailable) values " +
+                "(3, 3, 'The Bridge', 'Hip Hop', 2009, 8.99, 1);");
+        stat.executeUpdate(
+                "insert into albums " +
+                "(id, artistid, name, genre, year, price, isavailable) values " +
+                "(4, 4, 'Bad Girls', 'Disco', 1990, 7.00, 1);");
+        stat.executeUpdate(
+                "insert into albums " +
+                "(id, artistid, name, genre, year, price, isavailable) values " +
+                "(5, 4, 'A Love Trilogy', 'Disco', 1992, 5.50, 0);");
 
         stat.executeUpdate("drop table if exists songs;");
         stat.executeUpdate(
@@ -85,6 +100,103 @@
         stat.executeUpdate("insert into songs " +
                            "(albumid, name) values " +
                            "(1, 'Leave Me Alone');");
+
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(2, 'Where or When');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(2, 'Too Marvelous For Words');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(2, 'Accustomed to His Face');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(2, 'The Boy from Ipanema');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(2, 'Walk on By');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(2, 'My Thrill');");
+
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'Welcome');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'Shine All Day Feat. Q-Tip');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'We Speak Hip Hop Feat. Abass');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'Unanswered');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'Tribute to the Breakdancer');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'Grown and Sexy');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'Connection');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'Zuka the Sound');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(3, 'Oh Man Feat. Syndee');");
+
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Hot Stuff');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Bad Girls');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Love Will Always Find You');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Walk Away');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Dim All the Lights');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Journey to the Center of Your Heart');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'One Night in a Lifetime');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Oh My Honor');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Our Love');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Lucky');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(4, 'Sunset People');");
+
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(5, 'Try Me, I Know We Can Make It');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(5, 'Prelude to Love');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(5, 'Could It Be Magic');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(5, 'Wasted');");
+        stat.executeUpdate("insert into songs " +
+                           "(albumid, name) values " +
+                           "(5, 'Come With Me');");
 
         out.println("Database set up successfully.");
 
