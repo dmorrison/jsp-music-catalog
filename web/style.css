@@ -10,7 +10,7 @@ a:hover {text-decoration:underline;}
 #menu a {color:#FFFFFF; font-size:14px; padding:9px 10px; text-decoration:none;}
 #menu a:hover {background:url(images/menu_over.jpg) bottom center no-repeat;}
 #menu form {display:inline;}
-#search-term {width:350px;}
+#search-terms {width:350px;}
 
 #main {margin:0 90px 0 110px; background:url(images/content_bckg.jpg) no-repeat #8EB002; float:left; min-height:420px; display:inline;}
 #text {width:500px; margin:30px 240px 0px 40px;}
