@@ -66,7 +66,11 @@ if (detailsType.equals("artist")) {
 <h1>Artist Albums - <%= artist.getFirstName() + " " + artist.getLastName() %></h1>
 
 <% for (Album album : albums) { %>
-<h2><%= album.getName() %></h2>
+<h2>
+    <a href="master.jsp?pageName=details.jsp&detailsType=album&albumId=<%= album.getId() %>">
+        <%= album.getName() %>
+    </a>
+</h2>
 <table>
     <tr>
         <td>Genre</td>

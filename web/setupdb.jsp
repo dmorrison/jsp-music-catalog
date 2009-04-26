@@ -1,4 +1,3 @@
-<%@ page %>
 <%@ page import="java.sql.*" %>
 
 <%

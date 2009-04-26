@@ -16,8 +16,8 @@
     <div id="logo"><a href="index.jsp">XYZ Entertainment</a></div>
     <div id="menu">
         <!--<a href="index.jsp">Home</a>-->
-        <form name="search-form" action="index.jsp" method="post">
-            <input type="text" id="search-term" name="search-term" />
+        <form name="search-form" action="search" method="post">
+            <input type="text" id="search-terms" name="search-terms" />
             <input type="submit" value="Search" id="search-button"
                 name="search-button" />
         </form>
