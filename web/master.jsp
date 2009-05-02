@@ -26,7 +26,7 @@ if (session.getAttribute("status") != null) {
         <a href="master.jsp?pageName=addartist.jsp">Add Artist</a> |
         <a href="master.jsp?pageName=addalbum.jsp">Add Album</a> |
         <a href="master.jsp?pageName=addsong.jsp">Add Song</a> |
-        <span id="status"></span> <br />
+        <span id="status"><%= status %></span> <br />
         <form name="search-form" action="search" method="post">
             <input type="text" id="search-terms" name="search-terms" />
             <input type="submit" value="Search" id="search-button"

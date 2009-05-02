@@ -89,6 +89,10 @@ public class Repository {
             "('" + firstName + "', '" + lastName + "');");
     }
 
+    public List<Album> getAlbums() throws ClassNotFoundException, SQLException, ParseException {
+        return getAlbumsLike("");
+    }
+
     public List<Album> getAlbumsLike(String likeClause) throws ClassNotFoundException, SQLException, ParseException {
         Vector<Album> albums = new Vector<Album>();
         ResultSet rs = stat.executeQuery(
@@ -151,6 +155,13 @@ public class Repository {
         return songs;
     }
 
+    void AddAlbum(int artist, String name, String genre, int year, float price, boolean isAvailable) throws SQLException {
+        stat.executeUpdate(
+            "insert into albums " +
+            "(artistid, name, genre, year, price, isavailable) values " +
+            "(" + artist + ", '" + name + "', '" + genre + "', " + year + ", " + price + ", " + (isAvailable ? 1 : 0) + ");");
+    }
+
     public List<Song> getSongsLike(String likeClause) throws ClassNotFoundException, SQLException, ParseException {
         Vector<Song> songs = new Vector<Song>();
         ResultSet rs = stat.executeQuery(
@@ -169,5 +180,12 @@ public class Repository {
         rs.close();
 
         return songs;
+    }
+
+    void AddSong(int album, String name) throws SQLException {
+        stat.executeUpdate(
+            "insert into songs " +
+            "(albumid, name) values " +
+            "(" + album + ", '" + name + "');");
     }
 }

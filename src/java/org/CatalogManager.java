@@ -34,6 +34,30 @@ public class CatalogManager extends HttpServlet {
                 "Artist added");
         }
 
+        if (request.getParameter("addAlbum") != null) {
+            repo.AddAlbum(
+                Integer.parseInt(request.getParameter("artist")),
+                request.getParameter("name"),
+                request.getParameter("genre"),
+                Integer.parseInt(request.getParameter("year")),
+                Float.parseFloat(request.getParameter("price")),
+                Boolean.parseBoolean(request.getParameter("isAvailable")));
+
+            request.getSession().setAttribute(
+                "status",
+                "Album added");
+        }
+
+        if (request.getParameter("addSong") != null) {
+            repo.AddSong(
+                Integer.parseInt(request.getParameter("album")),
+                request.getParameter("name"));
+
+            request.getSession().setAttribute(
+                "status",
+                "Song added");
+        }
+
         response.sendRedirect("index.jsp");
     } 
 
