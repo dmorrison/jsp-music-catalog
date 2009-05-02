@@ -81,6 +81,13 @@ public class Repository {
 
         return albums;
     }
+    
+    void AddArtist(String firstName, String lastName) throws SQLException, SQLException {
+        stat.executeUpdate(
+            "insert into artists " +
+            "(fname, lname) values " +
+            "('" + firstName + "', '" + lastName + "');");
+    }
 
     public List<Album> getAlbumsLike(String likeClause) throws ClassNotFoundException, SQLException, ParseException {
         Vector<Album> albums = new Vector<Album>();
